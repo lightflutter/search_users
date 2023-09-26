@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:search_users/Data/Model/user_response.dart';
 import 'package:search_users/Shared/constants.dart';
 
 class UserApiProvider{
