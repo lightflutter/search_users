@@ -1,8 +1,8 @@
 class UserResponse {
-  String avatarUrl;
-  String url;
-  String name;
-  String bio;
+  final String avatarUrl;
+  final String url;
+  final String name;
+  final String bio;
 
   UserResponse(this.avatarUrl, this.url, this.name, this.bio);
 
