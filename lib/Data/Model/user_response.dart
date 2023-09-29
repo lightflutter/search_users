@@ -1,12 +1,12 @@
-class UserResponse {
+class User {
   final String avatarUrl;
   final String url;
   final String name;
   final String bio;
 
-  UserResponse(this.avatarUrl, this.url, this.name, this.bio);
+  User(this.avatarUrl, this.url, this.name, this.bio);
 
-  UserResponse.fromJson(Map<String, dynamic> json)
+  User.fromJson(Map<String, dynamic> json)
       : avatarUrl = json['avatar_url'],
         url = json['url'],
         name = json['name'],
