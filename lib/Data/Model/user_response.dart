@@ -1,14 +1,6 @@
-class User {
-  final String avatarUrl;
-  final String url;
-  final String name;
-  final String bio;
+import 'package:search_users/Data/Model/user.dart';
+class UserResponse {
+  final User user;
 
-  User(this.avatarUrl, this.url, this.name, this.bio);
-
-  User.fromJson(Map<String, dynamic> json)
-      : avatarUrl = json['avatar_url'],
-        url = json['url'],
-        name = json['name'],
-        bio = json['bio'];
+  UserResponse(this.user);
 }
