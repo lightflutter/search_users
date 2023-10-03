@@ -6,6 +6,12 @@ class User {
 
   User(this.avatarUrl, this.url, this.name, this.bio);
 
+  User.empty({String empty = 'no data'})
+      : avatarUrl = empty,
+        url = empty,
+        name = empty,
+        bio = empty;
+
   User.fromJson(Map<String, dynamic> json)
       : avatarUrl = json['avatar_url'],
         url = json['url'],
