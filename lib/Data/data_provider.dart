@@ -1,9 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:search_users/Data/Model/user_response.dart';
-import 'package:search_users/Shared/constants.dart';
 
 class UserApiProvider {
-  final String _endpoint = url;
   final Dio _dio = Dio();
 
   Future<UserResponse> getUser(String userName) async {
@@ -15,5 +13,13 @@ class UserApiProvider {
     }
   }
 
-  String _setEndpointWith(String userName) => _endpoint + userName;
+  String _setEndpointWith(String userName) {
+    final httpsUri = Uri(
+        scheme: 'https',
+        host: 'api.github.com',
+        path: 'users',
+        fragment: userName);
+
+    return httpsUri.toString();
+  }
 }
