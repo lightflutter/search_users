@@ -17,9 +17,7 @@ class UserApiProvider {
     final httpsUri = Uri(
         scheme: 'https',
         host: 'api.github.com',
-        path: 'users',
-        fragment: userName);
-
+        path: 'users/$userName');
     return httpsUri.toString();
   }
 }
