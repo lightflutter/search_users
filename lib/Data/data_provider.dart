@@ -14,10 +14,8 @@ class UserApiProvider {
   }
 
   String _setEndpointWith(String userName) {
-    final httpsUri = Uri(
-        scheme: 'https',
-        host: 'api.github.com',
-        path: 'users/$userName');
+    final httpsUri =
+        Uri(scheme: 'https', host: 'api.github.com', path: 'users/$userName');
     return httpsUri.toString();
   }
 }
